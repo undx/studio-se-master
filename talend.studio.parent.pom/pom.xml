@@ -453,5 +453,24 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>unpacked.plugins</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.eclipse.tycho</groupId>
+                        <artifactId>tycho-packaging-plugin</artifactId>
+                        <version>${tycho.version}</version>
+                        <configuration>
+                            <archive>
+                                <manifestEntries>
+                                    <Eclipse-BundleShape>dir</Eclipse-BundleShape>
+                                </manifestEntries>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 </project>
