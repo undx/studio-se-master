@@ -59,7 +59,7 @@
                             </files>
                         </configuration>
                     </execution>
-                </executions>      
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
@@ -91,7 +91,7 @@
                             <id>${project.artifactId}</id>
                         </product>
                     </products>
-                </configuration>        
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -118,7 +118,7 @@
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
                                     <artifactId>eclipse-launcher-mac-${launcher.prefix}</artifactId>
-                                    <version>6.4.0</version>
+                                    <version>6.5.1</version>
                                     <type>zip</type>
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${studio.dir}</outputDirectory>
@@ -305,7 +305,7 @@
                                 <echo>product.timestamp=${product.timestamp}</echo>
                                 <echo>version.full=${version.full}</echo>
                                 <fileset dir="${studio.dir}/plugins" includes="${product.branding.platform}_${product.version}*/about.mappings" id="aboutmappingspath_temp" />
-                                <pathconvert property="aboutmappingspath" refid="aboutmappingspath_temp" />    
+                                <pathconvert property="aboutmappingspath" refid="aboutmappingspath_temp" />
                                 <echo>aboutmappingspath=${aboutmappingspath}</echo>
                                 <loadfile property="about" srcFile="${aboutmappingspath}">
                                     <filterchain>
@@ -520,7 +520,7 @@
                                     <artifacts>
                                         <artifact>
                                             <file>${project.build.directory}/products/${product.final.name}.zip</file>
-                                            <type>product</type>                           
+                                            <type>product</type>
                                         </artifact>
                                     </artifacts>
                                 </configuration>
